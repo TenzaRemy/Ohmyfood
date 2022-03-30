@@ -5,7 +5,6 @@
 
 header{
 	@include flex;
-	box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
 
 	& img{
 		padding: 20px 0;
@@ -21,6 +20,10 @@ header{
 	}
 }
 
+.header{
+	box-shadow: 5px 5px 5px lightgray;
+}
+
 #logo_map{
 	color: #333333;
 }
@@ -34,25 +37,27 @@ header{
 	&__ville{
 	border: none;
 	background-color: #eaeaea;
-	color: #333333;
 	text-align: center;
 	font-size: 18px;
+	width: 80%;
 	}
 }
 
 .reservation{
-	padding: 40px 20px 75px 20px;
+	padding: 40px 0 75px 0;
 	text-align: center;
 	font-size: 16px;
 	background-color: #F6F6F6;
 
 	& h1{
-	padding-bottom: 15px;
-	font-size: 28px;
+	padding: 0 45px 15px 45px;
+	font-size: 24px;
 	}
 
 	& p{
-	padding-bottom: 50px;
+	color: #666666;
+	padding-bottom: 55px;
+	font-size: 18px;
 	}
 
 	&__btn{
@@ -60,6 +65,8 @@ header{
  	color: white;
  	border-radius: 50px;
  	padding: 20px 30px;
+ 	font-weight: bold;
+ 	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
 	}
 }
 
@@ -185,14 +192,17 @@ header{
 	background-color: #F2F2F2;
 	margin-top: -50px;
 	position: relative;
-	padding: 30px 20px;
+	padding: 30px 10px;
+	font-size: 15px;
+
 
 	&__titre{
 	display: flex;
 	justify-content: space-between;
 	align-items: baseline;
 	width: 100%;
-	font-size: 14px;
+	font-size: 13px;
+	margin-left: 10px;
 	font-family: $font-title;
 		& h1{
 			font-weight: 300;
@@ -201,7 +211,7 @@ header{
 
 	& i{
 	font-size: 30px;
-	padding-right: 20px;
+	padding-right: 40px;
 	}
 
 	&__carte{
@@ -214,6 +224,41 @@ header{
 	&__article{
 	width: 100%;
 	padding-top: 10px;
+
+		&_titre{
+		font-size: 14px;
+		}
+
+		&_text{
+		background-color: white;
+		border-radius: 20px;
+		margin: 20px 5px;
+		padding: 15px;
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+		box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+		text-overflow: 	ellipsis;
+
+			& p{
+			display: flex;
+			justify-content: space-between;
+			font-size: 15px;
+
+				& strong{
+				color: #353535;
+				margin-right: 10px;
+				}
+			}
+		}
+
+		& h2{
+		text-transform: uppercase;
+		font-size: 18px;
+		font-weight: 400;
+		margin: 0 0 5px 10px;
+		}
 	}
 
 	&__trait{
@@ -221,18 +266,10 @@ header{
 	border: none;
 	width: 50px;
 	height: 4px;
+	margin-left: 10px;
 	}
 
-	&__article_text{
-	background-color: white;
-	border-radius: 20px;
-	margin: 20px 5px;
-	padding: 10px;
-	overflow: hidden;
-	display: flex;
-	flex-direction: column;
-	gap: 5px;
-	}
+	
 
 	&__article_titre{
 
@@ -256,14 +293,20 @@ header{
 	}
 }
 
-.commande__btn{
+.commande{
+	@include flex;
+	width: 100%;
+
+	&__btn{
 	background: linear-gradient(160deg, $color-secondary, $color-primary);
  	color: white;
  	border-radius: 50px;
- 	padding: 20px 50px;
- 	position: absolute;
- 	margin-left: 25%;
+ 	padding: 15px 45px;
+ 	position: relative;
+ 	font-weight: bold;
+ 	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
 	}
+}
 
 /* footer index et 4 pages */
 
@@ -298,7 +341,7 @@ header{
 	}
 
 	&__bold{
-	font-weight: 500;
+	font-weight: bold;
 	}
 
 }

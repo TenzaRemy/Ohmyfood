@@ -14,7 +14,6 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
 }
 header img {
   padding: 20px 0;
@@ -26,6 +25,10 @@ header a {
   font-size: 26px;
   position: absolute;
   left: 20px;
+}
+
+.header {
+  box-shadow: 5px 5px 5px lightgray;
 }
 
 #logo_map {
@@ -43,29 +46,33 @@ header a {
 .localisation__ville {
   border: none;
   background-color: #eaeaea;
-  color: #333333;
   text-align: center;
   font-size: 18px;
+  width: 80%;
 }
 
 .reservation {
-  padding: 40px 20px 75px 20px;
+  padding: 40px 0 75px 0;
   text-align: center;
   font-size: 16px;
   background-color: #F6F6F6;
 }
 .reservation h1 {
-  padding-bottom: 15px;
-  font-size: 28px;
+  padding: 0 45px 15px 45px;
+  font-size: 24px;
 }
 .reservation p {
-  padding-bottom: 50px;
+  color: #666666;
+  padding-bottom: 55px;
+  font-size: 18px;
 }
 .reservation__btn {
   background: linear-gradient(160deg, #FF79DA, #9356DC);
   color: white;
   border-radius: 50px;
   padding: 20px 30px;
+  font-weight: bold;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
 }
 
 .fonctionnement {
@@ -176,14 +183,16 @@ header a {
   background-color: #F2F2F2;
   margin-top: -50px;
   position: relative;
-  padding: 30px 20px;
+  padding: 30px 10px;
+  font-size: 15px;
 }
 .menu__titre {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   width: 100%;
-  font-size: 14px;
+  font-size: 13px;
+  margin-left: 10px;
   font-family: "Shrikhand", cursive, sans-serif;
 }
 .menu__titre h1 {
@@ -191,7 +200,7 @@ header a {
 }
 .menu i {
   font-size: 30px;
-  padding-right: 20px;
+  padding-right: 40px;
 }
 .menu__carte {
   display: flex;
@@ -203,21 +212,42 @@ header a {
   width: 100%;
   padding-top: 10px;
 }
-.menu__trait {
-  background-color: #99E2D0;
-  border: none;
-  width: 50px;
-  height: 4px;
+.menu__article_titre {
+  font-size: 14px;
 }
 .menu__article_text {
   background-color: white;
   border-radius: 20px;
   margin: 20px 5px;
-  padding: 10px;
+  padding: 15px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   gap: 5px;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  text-overflow: ellipsis;
+}
+.menu__article_text p {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+}
+.menu__article_text p strong {
+  color: #353535;
+  margin-right: 10px;
+}
+.menu__article h2 {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0 0 5px 10px;
+}
+.menu__trait {
+  background-color: #99E2D0;
+  border: none;
+  width: 50px;
+  height: 4px;
+  margin-left: 10px;
 }
 .menu__article_prix {
   display: flex;
@@ -236,13 +266,20 @@ header a {
   overflow: hidden;
 }
 
+.commande {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 .commande__btn {
   background: linear-gradient(160deg, #FF79DA, #9356DC);
   color: white;
   border-radius: 50px;
-  padding: 20px 50px;
-  position: absolute;
-  margin-left: 25%;
+  padding: 15px 45px;
+  position: relative;
+  font-weight: bold;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* footer index et 4 pages */
@@ -272,7 +309,7 @@ header a {
   padding-right: 10px;
 }
 .footer__bold {
-  font-weight: 500;
+  font-weight: bold;
 }
 
 @media screen and (min-width: 1080px) {
