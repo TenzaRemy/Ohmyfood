@@ -346,7 +346,7 @@ header{
 
 }
 
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 993px) {
 
 header img{
 	width: 300px;
@@ -366,6 +366,15 @@ header img{
 	
 }
 
+.menu__article{
+	width: unset;
+	margin: 0 40px 10px;
+
+	&_text{
+	width: 110%;
+	}
+}
+
 .restaurants{
 	padding: 30px 10px;
 
@@ -374,6 +383,23 @@ header img{
 	}
 }
 
+.commande__btn{
+	padding: 25px 45px;
+}
+
+.footer{
+	flex-direction: unset;
+}
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+	
+.restaurants__lien {
+	width: 45%;
+}
+
+	
 .footer{
 	flex-direction: unset;
 }

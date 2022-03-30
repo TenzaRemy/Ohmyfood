@@ -312,7 +312,7 @@ header a {
   font-weight: bold;
 }
 
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 993px) {
   header img {
     width: 300px;
   }
@@ -328,11 +328,36 @@ header a {
     margin-right: 30px;
   }
 
+  .menu__carte {
+    justify-content: center;
+  }
+
+  .menu__article {
+    width: unset;
+    margin: 0 40px 10px;
+  }
+  .menu__article_text {
+    width: 100%;
+  }
+
   .restaurants {
     padding: 30px 10px;
   }
   .restaurants__cards {
     flex-wrap: unset;
+  }
+
+  .commande__btn {
+    padding: 25px 55px;
+  }
+
+  .footer {
+    flex-direction: unset;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .restaurants__lien {
+    width: 45%;
   }
 
   .footer {
