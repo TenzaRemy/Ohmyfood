@@ -72,7 +72,12 @@ header a {
   border-radius: 50px;
   padding: 20px 30px;
   font-weight: bold;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+  transition: filter 300ms, box-shadow 300ms 100ms;
+}
+.reservation__btn:hover {
+  filter: brightness(120%);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
 }
 
 .fonctionnement {
@@ -171,6 +176,30 @@ header a {
   padding-bottom: 5px;
 }
 
+.fa-heart {
+  opacity: 1;
+  position: relative;
+  cursor: pointer;
+}
+.fa-heart::after {
+  content: "\f004";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 300ms ease-out;
+}
+.fa-heart:active::after {
+  font-weight: 900;
+  opacity: 1;
+  background: linear-gradient(160deg, #FF79DA, #9356DC);
+  background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 /* CSS concernant les 4 pages autres que l'index */
 .img_background {
   width: 100%;
@@ -266,6 +295,26 @@ header a {
   overflow: hidden;
 }
 
+.menu__article:nth-child(1) {
+  animation: apparition 1s cubic-bezier(0.35, 0.2, 0.32, 1.01) 100ms;
+}
+.menu__article:nth-child(2) {
+  animation: apparition 1.5s cubic-bezier(0.35, 0.2, 0.32, 1.01) 200ms;
+}
+.menu__article:nth-child(3) {
+  animation: apparition 2s cubic-bezier(0.35, 0.2, 0.32, 1.01) 300ms;
+}
+@keyframes apparition {
+  0% {
+    transform: translateY(50%);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .commande {
   display: flex;
   justify-content: center;
@@ -279,7 +328,12 @@ header a {
   padding: 15px 45px;
   position: relative;
   font-weight: bold;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+  transition: filter 300ms, box-shadow 300ms 100ms;
+}
+.commande__btn:hover {
+  filter: brightness(120%);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* footer index et 4 pages */
@@ -328,16 +382,12 @@ header a {
     margin-right: 30px;
   }
 
-  .menu__carte {
-    justify-content: center;
-  }
-
   .menu__article {
     width: unset;
     margin: 0 40px 10px;
   }
   .menu__article_text {
-    width: 100%;
+    width: 110%;
   }
 
   .restaurants {
@@ -348,7 +398,7 @@ header a {
   }
 
   .commande__btn {
-    padding: 25px 55px;
+    padding: 25px 45px;
   }
 
   .footer {

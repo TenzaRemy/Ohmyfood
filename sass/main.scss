@@ -66,7 +66,13 @@ header{
  	border-radius: 50px;
  	padding: 20px 30px;
  	font-weight: bold;
- 	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+ 	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+ 	transition: filter 300ms, box-shadow 300ms 100ms; 
+
+ 		&:hover{
+ 		filter: brightness(120%);
+ 		box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+ 		}
 	}
 }
 
@@ -177,6 +183,32 @@ header{
 	& h3{
 	padding-bottom: 5px;
 	}
+}
+
+.fa-heart {
+    opacity: 1;
+    position: relative; 
+    cursor: pointer;
+        
+    &::after {
+        content: "\f004";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity 300ms ease-out;   
+    }
+
+    &:active::after { 
+        font-weight: 900;
+        opacity: 1; 
+        background: linear-gradient(160deg, $color-secondary, $color-primary); 
+        background-clip: text;
+		background-clip: text;
+		color: transparent;         
+    }
 }
 
 /* CSS concernant les 4 pages autres que l'index */
@@ -293,6 +325,33 @@ header{
 	}
 }
 
+.menu__article{
+
+	 &:nth-child(1) {
+            animation: apparition 1s cubic-bezier(.35,.2,.32,1.01) 100ms;
+        }
+
+        &:nth-child(2) {
+            animation: apparition 1.5s cubic-bezier(.35,.2,.32,1.01) 200ms;
+        }
+
+        &:nth-child(3) {
+            animation: apparition 2s cubic-bezier(.35,.2,.32,1.01) 300ms;
+        }
+
+        @keyframes apparition { 
+            0% {
+                transform: translateY(50%);
+                opacity: 0.3;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+}
+
 .commande{
 	@include flex;
 	width: 100%;
@@ -304,7 +363,13 @@ header{
  	padding: 15px 45px;
  	position: relative;
  	font-weight: bold;
- 	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+ 	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+ 	transition: filter 300ms, box-shadow 300ms 100ms;
+
+ 		&:hover{
+ 		filter: brightness(120%);
+ 		box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+ 		}
 	}
 }
 
