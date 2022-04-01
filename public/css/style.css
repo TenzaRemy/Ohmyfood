@@ -1,15 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  text-decoration: none;
-}
-
-body {
-  font-family: "Roboto", sans-serif;
-  font-size: 18px;
-}
-
 header {
   display: flex;
   justify-content: center;
@@ -29,6 +17,100 @@ header a {
 
 .header {
   box-shadow: 5px 5px 5px lightgray;
+}
+
+.footer {
+  background-color: #333333;
+  padding: 20px 30px 30px 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.footer__logo {
+  padding-bottom: 15px;
+  font-family: "Shrikhand", cursive, sans-serif;
+  color: white;
+  font-size: 20px;
+}
+.footer li {
+  padding: 5px 0;
+}
+.footer a {
+  color: white;
+}
+.footer .fa-handshake-angle {
+  font-size: 12px;
+}
+.footer i {
+  padding-right: 10px;
+}
+.footer__bold {
+  font-weight: bold;
+}
+
+.loader {
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: loader 3s both;
+}
+.loader__ring {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 10px solid transparent;
+  border-color: #9356DC;
+  animation: rotate 1s linear infinite;
+}
+.loader__ring::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border: 10px solid transparent;
+}
+.loader__ring::before {
+  width: 180px;
+  height: 180px;
+  border-color: #FF79DA;
+  animation: rotate 1s linear infinite;
+}
+@keyframes ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loader {
+  0% {
+    opacity: 1;
+    z-index: 1;
+  }
+  75% {
+    opacity: 1;
+    z-index: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
 }
 
 #logo_map {
@@ -194,7 +276,7 @@ header a {
 .fa-heart:active::after {
   font-weight: 900;
   opacity: 1;
-  background: linear-gradient(160deg, #FF79DA, #9356DC);
+  background: linear-gradient(60deg, #FF79DA, #99E2D0);
   background-clip: text;
   background-clip: text;
   color: transparent;
@@ -337,35 +419,6 @@ header a {
 }
 
 /* footer index et 4 pages */
-.footer {
-  background-color: #333333;
-  padding: 20px 30px 30px 30px;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-}
-.footer__logo {
-  padding-bottom: 15px;
-  font-family: "Shrikhand", cursive, sans-serif;
-  color: white;
-  font-size: 20px;
-}
-.footer li {
-  padding: 5px 0;
-}
-.footer a {
-  color: white;
-}
-.footer .fa-handshake-angle {
-  font-size: 12px;
-}
-.footer i {
-  padding-right: 10px;
-}
-.footer__bold {
-  font-weight: bold;
-}
-
 @media screen and (min-width: 993px) {
   header img {
     width: 300px;
