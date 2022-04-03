@@ -1,0 +1,35 @@
+.footer{
+	background-color: #333333;
+	padding: 20px 30px 30px 30px;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+
+	&__logo{
+	padding-bottom: 15px;
+	font-family: $font-title;
+	color: white;
+	font-size: 20px;
+	}
+
+	& li{
+	padding: 5px 0;
+	}
+
+	& a{
+	color: white;
+	}
+
+	& .fa-handshake-angle{
+	font-size: 12px;
+	}
+
+	& i{
+	padding-right: 10px;
+	}
+
+	&__bold{
+	font-weight: bold;
+	}
+
+}

@@ -1,0 +1,85 @@
+.loader {
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    @include flex;
+    animation: loader 3s both;
+
+    & img{
+    width: 150px;
+    position: absolute;
+    top: 50%;
+    animation: logo 1s cubic-bezier(.34,.63,.74,.44) infinite;
+    }
+
+    &__ring, {
+       width: 250px;
+       height: 250px;
+       border-radius: 50%;
+       border: 10px solid; 
+       border-top: none;
+       border-left: none;   
+       border-color: $color-primary;
+       animation: ring 1s linear infinite;
+
+       &::before, {
+       content:"";
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border: 10px solid;
+        border-color: $color-tertiary;
+       }
+
+       @keyframes ring {
+           from {
+               transform: rotate(0deg);
+           }
+
+           to {
+               transform: rotate(360deg);
+            }   
+       }
+
+       @keyframes logo {
+             0%  { 
+             transform: scale(0.7) translate(-50%, 50%); 
+             }
+
+            25% {
+            transform: scale(1) translate(40%, 70%);
+            }
+
+            50% {
+            transform: scale(1.3) translate(20%, -20% );
+            }
+
+            75%{
+            transform: scale(1) translate(-40%, 60%);
+            }
+
+            100%{
+                transform: scale(0.7) translate(-50%, 50%); 
+            }
+       }
+
+        @keyframes loader {
+           0% {
+              opacity: 1;
+              z-index: 1;
+           }
+
+           75% {
+              opacity: 1;
+              z-index: 1;
+           }
+
+           100% {
+              opacity: 0;
+              z-index: -1;
+           }        
+       }      
+    }
+}

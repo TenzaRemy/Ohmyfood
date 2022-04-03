@@ -1,0 +1,59 @@
+@media screen and (min-width: 993px) {
+
+header img{
+	width: 300px;
+}
+
+.fonctionnement {
+	margin: 0;
+
+	& ul{
+	flex-direction: row;
+	padding: 20px 0 0 30px;
+
+		& li{
+		margin-right: 30px;
+		}
+	}
+	
+}
+
+.menu__article{
+	width: unset;
+	margin: 0 40px 10px;
+
+	&_text{
+	width: 110%;
+	}
+}
+
+.restaurants{
+	padding: 30px 10px;
+
+	&__cards{
+	flex-wrap: unset;
+	}
+}
+
+.commande__btn{
+	padding: 25px 45px;
+}
+
+.footer{
+	flex-direction: unset;
+}
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+	
+.restaurants__lien {
+	width: 45%;
+}
+
+	
+.footer{
+	flex-direction: unset;
+}
+
+}

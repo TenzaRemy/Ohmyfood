@@ -1,0 +1,20 @@
+header{
+	@include flex;
+
+	& img{
+		padding: 20px 0;
+		width: 180px;
+	}
+
+	& a{
+	margin-right: 20px;
+	color: black;
+	font-size: 26px;
+	position: absolute;
+	left: 20px;
+	}
+}
+
+.header{
+	box-shadow: 5px 5px 5px lightgray;
+}

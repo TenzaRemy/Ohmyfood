@@ -1,0 +1,166 @@
+.localisation{
+	@include flex;
+	background-color: #eaeaea;
+	padding: 15px 0;
+	text-align: center;
+
+	&__ville{
+	border: none;
+	background-color: #eaeaea;
+	text-align: center;
+	font-size: 18px;
+	width: 80%;
+	}
+}
+
+.reservation{
+	padding: 40px 0 75px 0;
+	text-align: center;
+	font-size: 16px;
+	background-color: #F6F6F6;
+
+	& h1{
+	padding: 0 45px 15px 45px;
+	font-size: 24px;
+	}
+
+	& p{
+	color: #666666;
+	padding-bottom: 55px;
+	font-size: 18px;
+	}
+
+	
+}
+
+.fonctionnement{
+	padding: 50px 20px;
+
+	& ul{
+	display: flex;
+	flex-direction: column;
+	padding: 30px 40px 30px 10px;
+	}
+
+	& li{
+	display: flex;
+	border-radius: 25px;
+	background-color: #F2F2F2;
+	padding: 20px;
+	width: 100%;
+	box-shadow: 0 0 10px 1px lightgray;
+	align-items: baseline;
+	gap: 25px;
+	margin-bottom: 20px;
+	font-weight: 500;
+		&:hover{
+		background-color: #f5edff;
+			& i{
+			color: $color-primary;
+			}
+		}
+	}
+
+	&__nbr{
+	color: white;
+	border-radius: 100px;
+	background-color: $color-primary;
+	padding: 4px 10px;
+	margin-left: -35px;
+	}
+
+	& i{
+	color: #666666;
+	}
+
+	& .fa-mobile-alt{
+	font-size: 20px;
+	}
+
+	& .fa-list-ul{
+	font-size: 18px;
+	}
+
+}
+
+.restaurants{
+	background-color: #F2F2F2;
+	padding: 50px 20px;
+
+	& h2{
+	padding-bottom: 15px;
+	}
+
+	&__cards{
+	@include flex;
+	flex-wrap: wrap;
+	width: 100%;
+	gap: 20px;
+	}
+
+	&__lien{
+	width: 100%;
+	border-radius: 20px;
+	background-color: white;
+	position: relative;
+	box-shadow: 0 0 10px 1px lightgray;
+	}
+
+	&__new{
+	position: absolute;
+	background-color: $color-tertiary;
+	color: #008766;
+	right: 20px;
+	top: 20px;
+	padding: 6px 14px;
+	font-weight: 500;
+	font-size: 16px;
+	}
+
+	& img{
+	object-fit: cover;
+	height: 170px;
+	width: 100%;
+	border-radius: 20px 20px 0 0;
+	}
+
+	&__text{
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 10px 20px 15px;
+	color: black;
+	height: 50px;
+	}
+
+	& i{
+	padding: 5px 15px 0 0;
+	font-size: 30px;
+	}
+
+	& h3{
+	padding-bottom: 5px;
+	}
+}
+
+.fa-heart {
+    opacity: 1;
+    position: relative; 
+    cursor: pointer;
+        
+    &::after {
+        content: "\f004";
+        position: absolute;
+        left: 0;
+        opacity: 0;
+        transition: opacity 700ms cubic-bezier(1,.62,.78,.62);   
+    }
+
+    &:hover::after { 
+
+        opacity: 1; 
+        background: linear-gradient(190deg, $color-secondary, $color-primary); 
+        background-clip: text;
+        font-weight: 1000;
+		color: transparent;         
+    }
+}
