@@ -2,9 +2,9 @@
 	background: linear-gradient(160deg, $color-secondary, $color-primary);
  	color: white;
  	border-radius: 50px;
- 	padding: 20px 30px;
+ 	padding: 18px 25px;
  	font-weight: bold;
- 	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+ 	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
  	transition: filter 300ms, box-shadow 300ms 100ms; 
 
  		&:hover{
@@ -13,7 +13,7 @@
  		}
 	}
 
-	.commande{
+.commande{
 	@include flex;
 	width: 100%;
 
@@ -24,7 +24,7 @@
  	padding: 15px 45px;
  	position: relative;
  	font-weight: bold;
- 	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+ 	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
  	transition: filter 300ms, box-shadow 300ms 100ms;
 
  		&:hover{

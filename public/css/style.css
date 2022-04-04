@@ -127,9 +127,9 @@ header a {
   background: linear-gradient(160deg, #FF79DA, #9356DC);
   color: white;
   border-radius: 50px;
-  padding: 20px 30px;
+  padding: 18px 25px;
   font-weight: bold;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
   transition: filter 300ms, box-shadow 300ms 100ms;
 }
 .reservation__btn:hover {
@@ -150,7 +150,7 @@ header a {
   padding: 15px 45px;
   position: relative;
   font-weight: bold;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
   transition: filter 300ms, box-shadow 300ms 100ms;
 }
 .commande__btn:hover {
@@ -205,6 +205,9 @@ body {
 .fonctionnement {
   padding: 50px 20px;
 }
+.fonctionnement h2 {
+  font-size: 24px;
+}
 .fonctionnement ul {
   display: flex;
   flex-direction: column;
@@ -221,6 +224,7 @@ body {
   gap: 25px;
   margin-bottom: 20px;
   font-weight: 500;
+  font-size: 16px;
 }
 .fonctionnement li:hover {
   background-color: #f5edff;
@@ -251,6 +255,7 @@ body {
 }
 .restaurants h2 {
   padding-bottom: 15px;
+  font-size: 24px;
 }
 .restaurants__cards {
   display: flex;
@@ -290,12 +295,13 @@ body {
   color: black;
   height: 50px;
 }
+.restaurants__text h3 {
+  padding-bottom: 5px;
+  font-size: 20px;
+}
 .restaurants i {
   padding: 5px 15px 0 0;
   font-size: 30px;
-}
-.restaurants h3 {
-  padding-bottom: 5px;
 }
 
 .fa-heart {
@@ -312,7 +318,7 @@ body {
 }
 .fa-heart:hover::after {
   opacity: 1;
-  background: linear-gradient(190deg, #FF79DA, #9356DC);
+  background: linear-gradient(30deg, #FF79DA, #9356DC);
   background-clip: text;
   font-weight: 1000;
   color: transparent;
@@ -352,11 +358,11 @@ body {
   display: flex;
   width: 100%;
   flex-wrap: wrap;
-  padding: 20px 0;
+  padding: 20px 0 40px 0;
 }
 .menu__article {
   width: 100%;
-  padding-top: 10px;
+  padding: 10px 0 30px 0;
 }
 .menu__article_titre {
   font-size: 14px;
@@ -364,7 +370,7 @@ body {
 .menu__article_text {
   background-color: white;
   border-radius: 20px;
-  margin: 20px 5px;
+  margin: 15px 5px;
   padding: 15px;
   overflow: hidden;
   display: flex;
@@ -372,11 +378,11 @@ body {
   gap: 5px;
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
   text-overflow: ellipsis;
+  font-size: 14px;
 }
 .menu__article_text p {
   display: flex;
   justify-content: space-between;
-  font-size: 15px;
 }
 .menu__article_text p strong {
   color: #353535;
@@ -384,14 +390,14 @@ body {
 }
 .menu__article h2 {
   text-transform: uppercase;
-  font-size: 18px;
-  font-weight: 400;
+  font-size: 16px;
+  font-weight: 500;
   margin: 0 0 5px 10px;
 }
 .menu__trait {
   background-color: #99E2D0;
   border: none;
-  width: 50px;
+  width: 45px;
   height: 4px;
   margin-left: 10px;
 }
