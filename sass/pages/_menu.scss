@@ -104,29 +104,31 @@
 	}
 }
 
-.menu__article{
+.menu__article_text{
 
-	 	&:nth-child(1) {
-            animation: apparition 1s cubic-bezier(.35,.2,.32,1.01) 100ms;
-        }
+@keyframes apparition { 
+    from {
+        transform: translateY(10%);
+        opacity: 0;
+    }
 
-        &:nth-child(2) {
-            animation: apparition 1.5s cubic-bezier(.35,.2,.32,1.01) 200ms;
-        }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 
         &:nth-child(3) {
-            animation: apparition 2s cubic-bezier(.35,.2,.32,1.01) 300ms;
+            animation: apparition 1.5s cubic-bezier(.35,.2,.32,1.01) forwards;
+        }
+        &:nth-child(4) {
+            animation: apparition 1.5s cubic-bezier(.35,.2,.32,1.01) 200ms forwards;
+        }
+        &:nth-child(5) {
+            animation: apparition 1.5s cubic-bezier(.35,.2,.32,1.01) 400ms forwards;
+        }
+        &:nth-child(6) {
+            animation: apparition 1.5s cubic-bezier(.35,.2,.32,1.01) 600ms forwards;
         }
 
-        @keyframes apparition { 
-            from {
-                transform: translateY(40%);
-                opacity: 0;
-            }
-
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
 }
