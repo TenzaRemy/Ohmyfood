@@ -51,23 +51,50 @@
 		border-radius: 20px;
 		margin: 15px 5px;
 		padding: 15px;
-		overflow: hidden;
 		display: flex;
 		flex-direction: column;
 		gap: 5px;
 		box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
-		text-overflow: 	ellipsis;
 		font-size: 14px;
+		cursor: pointer;
+   		overflow: hidden;
+
+   		 	& h3{
+   		 		width: 100%;
+   		 		overflow: hidden;
+   		 		text-overflow: ellipsis;
+   		 		white-space: nowrap;
+   		 		transition: width 500ms ease-in-out;
+   		 	}
 
 			& p{
+			width: 100%;
+   		 	overflow: hidden;
+   		 	text-overflow: ellipsis;
+   			white-space: nowrap;
 			display: flex;
 			justify-content: space-between;
+			transition: width 500ms ease-in-out;
+
 
 				& strong{
 				color: #353535;
 				margin-right: 10px;
 				}
 			}
+
+			&:hover .menu__anim{
+			transform: translateX(-100%);
+
+				.fa-circle-check{
+				animation: verify 0.5s ease-in-out;
+				}
+
+				strong {
+				transform: translateX(-100%);
+				}
+			}
+
 		}
 
 		& h2{
@@ -77,6 +104,20 @@
 		margin: 0 0 5px 10px;
 		}
 	}
+
+	&__anim{
+	position: absolute;
+	width: 70px;
+	@include flex;
+	background-color: $color-tertiary;
+	border-radius: 0 20px 20px 0;
+	top: 0px;
+	right: -70px;
+	height: 80px;
+	transition: transform 500ms ease-in-out;
+	overflow: hidden;
+}
+
 
 	&__trait{
 	background-color: $color-tertiary;
@@ -90,17 +131,9 @@
 	display: flex;
 	}
 
-	&__anim{
-	position: absolute;
-	width: 70px;
-	@include flex;
-	background-color: $color-tertiary;
-	border-radius: 0 20px 20px 0;
-	height: 60px;
-	left: 100%;
-	bottom: 0;
-	overflow: hidden;
-
+.fa-circle-check{
+	color: white;
+	padding: 0 0 5px 0;
 	}
 }
 
@@ -108,7 +141,7 @@
 
 @keyframes apparition { 
     from {
-        transform: translateY(10%);
+        transform: translateY(40%);
         opacity: 0;
     }
 
@@ -131,4 +164,14 @@
             animation: apparition 1.5s cubic-bezier(.35,.2,.32,1.01) 600ms forwards;
         }
 
+}
+
+@keyframes verify {
+	from {
+		transform: rotate(90deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
 }

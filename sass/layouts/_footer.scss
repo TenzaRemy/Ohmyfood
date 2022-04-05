@@ -7,9 +7,12 @@
 
 	&__logo{
 	padding-bottom: 15px;
-	font-family: $font-title;
-	color: white;
-	font-size: 20px;
+
+		& img{
+		filter: invert(1);
+		width: 115px;
+		height: 22px;
+		}
 	}
 
 	& li{

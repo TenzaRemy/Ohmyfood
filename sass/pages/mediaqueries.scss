@@ -41,6 +41,19 @@ header img{
 
 .footer{
 	flex-direction: unset;
+	padding: 30px;
+
+	&__logo{
+	padding: 0;
+	}
+
+	& ul{
+	display: flex;
+		& li{
+		padding: 0;
+		margin-right: 50px;
+		}
+	}
 }
 
 }
@@ -54,6 +67,20 @@ header img{
 	
 .footer{
 	flex-direction: unset;
+	padding: 30px;
+
+	&__logo{
+	padding: 0;
+	}
+
+	& ul{
+	display: flex;
+		& li{
+		padding: 0;
+		margin-right: 13px;
+		font-size: 16px;
+		}
+	}
 }
 
 }

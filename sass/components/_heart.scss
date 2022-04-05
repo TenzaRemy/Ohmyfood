@@ -1,0 +1,22 @@
+.fa-heart {
+    opacity: 1;
+    position: relative; 
+    cursor: pointer;
+        
+    &::after {
+        content: "\f004";
+        position: absolute;
+        left: 0;
+        opacity: 0;
+        transition: opacity 700ms cubic-bezier(1,.62,.78,.62);   
+    }
+
+    &:hover::after { 
+
+        opacity: 1; 
+        background: linear-gradient(30deg, $color-secondary, $color-primary); 
+        background-clip: text;
+        font-weight: 600;
+		color: transparent;         
+    }
+}
