@@ -17,6 +17,8 @@
         background: linear-gradient(30deg, $color-secondary, $color-primary); 
         background-clip: text;
         font-weight: 600;
-		color: transparent;         
+		color: transparent;   
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;        
     }
 }

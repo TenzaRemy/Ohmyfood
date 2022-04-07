@@ -178,6 +178,8 @@ header a {
   background-clip: text;
   font-weight: 600;
   color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 * {
@@ -363,12 +365,43 @@ body {
   flex-wrap: wrap;
   padding: 20px 0 40px 0;
 }
+.menu__desc {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.menu__desc-food {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 10px;
+  transition: margin-right 0.4s 0.1s ease-in-out;
+}
+.menu__desc-prix {
+  font-weight: bold;
+  margin-left: 10px;
+  transition: transform 0.4s 0.1s ease-in-out;
+}
 .menu__article {
   width: 100%;
   padding: 10px 0 30px 0;
 }
-.menu__article_titre {
-  font-size: 14px;
+.menu__article_comp {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.menu__article_comp h3 {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: transform 0.4s 0.1s ease-in-out;
+  margin-bottom: 5px;
+}
+.menu__article_comp h3:hover h3 {
+  margin-right: 60px;
 }
 .menu__article_text {
   background-color: white;
@@ -376,32 +409,11 @@ body {
   margin: 15px 5px;
   padding: 15px;
   display: flex;
-  flex-direction: column;
   gap: 5px;
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
   font-size: 14px;
   cursor: pointer;
   overflow: hidden;
-}
-.menu__article_text h3 {
-  width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  transition: width 500ms ease-in-out;
-}
-.menu__article_text p {
-  width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  display: flex;
-  justify-content: space-between;
-  transition: width 500ms ease-in-out;
-}
-.menu__article_text p strong {
-  color: #353535;
-  margin-right: 10px;
 }
 .menu__article_text:hover .menu__anim {
   transform: translateX(-100%);
@@ -409,8 +421,13 @@ body {
 .menu__article_text:hover .menu__anim .fa-circle-check {
   animation: verify 0.5s ease-in-out;
 }
-.menu__article_text:hover .menu__anim strong {
-  transform: translateX(-100%);
+.menu__article_text:hover .menu__desc-prix {
+  transform: translateX(-250%);
+  margin-left: 50px;
+}
+.menu__article_text:hover .menu__desc-food {
+  margin-right: 50px;
+  width: 100%;
 }
 .menu__article h2 {
   text-transform: uppercase;
@@ -495,7 +512,7 @@ body {
   }
 
   .menu__article {
-    width: unset;
+    width: 26%;
     margin: 0 40px 10px;
   }
   .menu__article_text {

@@ -38,12 +38,48 @@
 	padding: 20px 0 40px 0;
 	}
 
+	&__desc{
+		display: flex;
+		justify-content: end;
+		align-items: center;
+
+		&-food{
+		width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-right: 10px;
+        transition: margin-right 0.4s 0.1s ease-in-out;
+		}
+
+		&-prix{
+		font-weight: bold;
+		margin-left: 10px;
+		transition: transform 0.4s 0.1s ease-in-out;
+		}
+
+	}
+
 	&__article{
 	width: 100%;
 	padding: 10px 0 30px 0;
 
-		&_titre{
-		font-size: 14px;
+		&_comp{
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+
+		& h3{
+		width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        transition: transform 0.4s 0.1s ease-in-out;
+        margin-bottom: 5px;
+        &:hover h3 {
+            margin-right: 60px;
+        }
+		}
 		}
 
 		&_text{
@@ -52,36 +88,11 @@
 		margin: 15px 5px;
 		padding: 15px;
 		display: flex;
-		flex-direction: column;
 		gap: 5px;
 		box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
 		font-size: 14px;
 		cursor: pointer;
    		overflow: hidden;
-
-   		 	& h3{
-   		 		width: 100%;
-   		 		overflow: hidden;
-   		 		text-overflow: ellipsis;
-   		 		white-space: nowrap;
-   		 		transition: width 500ms ease-in-out;
-   		 	}
-
-			& p{
-			width: 100%;
-   		 	overflow: hidden;
-   		 	text-overflow: ellipsis;
-   			white-space: nowrap;
-			display: flex;
-			justify-content: space-between;
-			transition: width 500ms ease-in-out;
-
-
-				& strong{
-				color: #353535;
-				margin-right: 10px;
-				}
-			}
 
 			&:hover .menu__anim{
 			transform: translateX(-100%);
@@ -89,10 +100,16 @@
 				.fa-circle-check{
 				animation: verify 0.5s ease-in-out;
 				}
+			}
 
-				strong {
-				transform: translateX(-100%);
-				}
+			&:hover .menu__desc-prix{
+			transform: translateX(-250%);
+			margin-left: 50px;
+			}
+
+			&:hover .menu__desc-food{
+			margin-right: 50px;
+			width: 100%;
 			}
 
 		}
