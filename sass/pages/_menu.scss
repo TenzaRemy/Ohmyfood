@@ -76,9 +76,11 @@
         text-overflow: ellipsis;
         transition: transform 0.4s 0.1s ease-in-out;
         margin-bottom: 5px;
-        &:hover h3 {
-            margin-right: 60px;
-        }
+		}
+
+		&:hover h3{
+			margin-right: 50px;
+			width: 100%;
 		}
 		}
 
@@ -119,6 +121,7 @@
 		font-size: 16px;
 		font-weight: 500;
 		margin: 0 0 5px 10px;
+		opacity: 0.8;
 		}
 	}
 

@@ -45,6 +45,11 @@ header img{
 
 	&__logo{
 	padding: 0;
+
+		& img{
+		height: 27px;
+		width: 130px;
+		}
 	}
 
 	& ul{
@@ -71,6 +76,11 @@ header img{
 
 	&__logo{
 	padding: 0;
+
+	& img{
+		height: 27px;
+		width: 130px;
+		}
 	}
 
 	& ul{

@@ -400,8 +400,9 @@ body {
   transition: transform 0.4s 0.1s ease-in-out;
   margin-bottom: 5px;
 }
-.menu__article_comp h3:hover h3 {
-  margin-right: 60px;
+.menu__article_comp:hover h3 {
+  margin-right: 50px;
+  width: 100%;
 }
 .menu__article_text {
   background-color: white;
@@ -434,6 +435,7 @@ body {
   font-size: 16px;
   font-weight: 500;
   margin: 0 0 5px 10px;
+  opacity: 0.8;
 }
 .menu__anim {
   position: absolute;
@@ -537,6 +539,10 @@ body {
   .footer__logo {
     padding: 0;
   }
+  .footer__logo img {
+    height: 27px;
+    width: 130px;
+  }
   .footer ul {
     display: flex;
   }
@@ -556,6 +562,10 @@ body {
   }
   .footer__logo {
     padding: 0;
+  }
+  .footer__logo img {
+    height: 27px;
+    width: 130px;
   }
   .footer ul {
     display: flex;
